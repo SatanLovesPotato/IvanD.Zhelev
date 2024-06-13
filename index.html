@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan Damyanov Zhelev - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: royalblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: royalblue;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+        }
+        .language-switcher {
+            float: right;
+            margin-right: 20px;
+        }
+        footer {
+            background-color: royalblue;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ivan Damyanov Zhelev</h1>
+        <p class="language-switcher">
+            <button onclick="switchLanguage('en')">English</button>
+            <button onclick="switchLanguage('bg')">Български</button>
+        </p>
+    </header>
+    <nav>
+        <a href="#about-me">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contacts">Contacts</a>
+        <a href="#cv">CV</a>
+    </nav>
+    <section id="about-me">
+        <h2>About Me</h2>
+        <p lang="en">My name is Ivan Damyanov Zhelev. I am a civil engineering major.</p>
+        <p lang="bg" style="display:none;">Казвам се Иван Дамянов Желев. Студент съм по строително инженерство.</p>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <ul>
+            <li lang="en">Expo Forest 1</li>
+            <li lang="bg" style="display:none;">Експо Форест 1</li>
+            <li lang="en">Botanica Lozen</li>
+            <li lang="bg" style="display:none;">Ботаника Лозен</li>
+            <li lang="en">Luda Yana</li>
+            <li lang="bg" style="display:none;">Луда Яна</li>
+        </ul>
+    </section>
+    <section id="contacts">
+        <h2>Contacts</h2>
+        <ul>
+            <li lang="en">Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <li lang="bg" style="display:none;">Имейл: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <li lang="en">LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></li>
+            <li lang="bg" style="display:none;">Линкедин: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></li>
+            <li lang="en">Instagram: <a href="https://www.instagram.com/yourprofile" target="_blank">yourprofile</a></li>
+            <li lang="bg" style="display:none;">Инстаграм: <a href="https://www.instagram.com/yourprofile" target="_blank">yourprofile</a></li>
+            <li lang="en">Phone: +123456789</li>
+            <li lang="bg" style="display:none;">Телефон: +123456789</li>
+        </ul>
+    </section>
+    <section id="cv">
+        <h2>CV</h2>
+        <p lang="en">You can view or download my CV <a href="your-cv-link" target="_blank">here</a>.</p>
+        <p lang="bg" style="display:none;">Можете да видите или изтеглите моята автобиография <a href="your-cv-link" target="_blank">тук</a>.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Ivan Damyanov Zhelev</p>
+    </footer>
+    <script>
+        function switchLanguage(lang) {
+            const elements = document.querySelectorAll('[lang]');
+            elements.forEach(element => {
+                if (element.getAttribute('lang') === lang) {
+                    element.style.display = 'block';
+                } else {
+                    element.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
